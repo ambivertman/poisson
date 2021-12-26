@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<time.h>
-#include<unistd.h>
-#include<math.h>
+#include <time.h>
+#include <unistd.h>
+#include <math.h>
 double mean(double a[100])
 {
     int i;//定义循环变量i
