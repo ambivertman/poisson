@@ -1,8 +1,15 @@
+#ifndef POISSON_H_INCLUDED
+#define POISSON_H_INCLUDED
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
 #include <math.h>
+
+double mean(double a[100]); //定义mean 函数,用该函数计算k值在	10000个数据中出现的频率，即概率
+int lsearch(int a[100],int x); //定义search函数,用该函数计算数值k在随机生成的100个数中出现的次数
+void func(double prob); //定义function函数,用该函数判断是否满足泊松分布
+double fact(int k);//定义fact函数，用该函数计算k的阶乘
 
 double mean(double a[100])
 {
@@ -16,7 +23,7 @@ double mean(double a[100])
     return average;//返回结果
 }
 
-int search(int a[100],int x)
+int lsearch(int a[100],int x)
 {
     int i,counter=0; //定义循环变量i
     for(i=0; i<100; i++)
@@ -36,7 +43,7 @@ double fact(int k)
 
     return result;
 }
-double function(double prob)
+void func(double prob)
 {
     int k;
     double r,c;//c表示k的阶乘
@@ -45,10 +52,12 @@ double function(double prob)
     scanf("%d",&k);
     c=fact(k);
     if(prob*c==pow(r,k)*exp(-r))
-        printf("%d服从参数为%.2lf的泊松分布",k,r);
+        printf("%d服从参数为%.4lf的泊松分布",k,r);
     else
-        printf("%d不服从参数为%.2lf的泊松分布",k,r);
-
-    return 0;
+        printf("%d不服从参数为%.4lf的泊松分布",k,r);
 }
 
+
+
+
+#endif // POISSON_H_INCLUDED
