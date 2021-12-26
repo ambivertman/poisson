@@ -24,18 +24,17 @@ int main(void)
             printf("第%d次随机生成0~100的数: %d \n",i+1,random[i]);
         }
         count=search(random,k);
-        printf("出现次数为%d\n",count);//输出数值k在随机生成的100个数中出现的次数
+         printf("出现次数为%d\n",count);//输出数值k在随机生成的100个数中出现的次数
         p[j]=count/100.0;
         printf("%d出现的频率为%lf\n",k,p[j]); //输出数值k在随机生成的100个数中出现的频率
 
-        printf("\n");
+          printf("\n");
     }
     printf("\n");
     prob=mean(p);//调用mean函数
     printf("%d出现的概率为:%lf",k,prob);//输出k值在10000个数据中出现的频率，即概率
     printf("\n");
     function(prob);//调用函数function
-
     return 0;
 }
 
