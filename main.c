@@ -9,6 +9,7 @@ int search(int a[100],int x); //定义search函数,用该函数计算数值k在�
 double function(double prob); //定义function函数,用该函数判断是否满足泊松分布
 double fact(int k);//定义fact函数，用该函数计算k的阶乘
 
+
 int main(void)
 {
     int i,j,k,count,random[100];//定义循环变量i和j,整数型变量count，随机数组random[100]
